@@ -1,6 +1,7 @@
 # VisionPlatform
 
 [![Python application](https://github.com/MichelfrancisBustillos/VisionPlatform/actions/workflows/python-app.yml/badge.svg)](https://github.com/MichelfrancisBustillos/VisionPlatform/actions/workflows/python-app.yml)
+[![CodeQL](https://github.com/MichelfrancisBustillos/VisionPlatform/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MichelfrancisBustillos/VisionPlatform/actions/workflows/github-code-scanning/codeql)
 ![License](https://img.shields.io/github/license/MichelfrancisBustillos/VisionPlatform)
 
 ## Description
