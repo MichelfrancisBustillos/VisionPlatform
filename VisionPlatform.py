@@ -1,9 +1,8 @@
 import serial
+import cv2
 
 # Global Vars
-ser = serial.Serial(
-    "COM7", 115200, timeout=None
-)  # Create Serial connection on port COM7 w/ baudrate 115200
+ser = serial.Serial("COM7", 115200, timeout=None)  # Create Serial connection on port COM7 w/ baudrate 115200
 
 
 def main():
@@ -16,9 +15,7 @@ def main():
         message_received = ser.readline().decode()
         if message_received != "":  # Do not print blank messages
             print(message_received)
-        if (
-            "SETUP COMPLETE!" in message_received
-        ):  # If message contains "SETUP COMPLETE!" print alert and exit loop
+        if ("SETUP COMPLETE!" in message_received):  # If message contains "SETUP COMPLETE!" print alert and exit loop
             print("Setup complete received.")
             setup_complete = True
 
@@ -31,9 +28,7 @@ def main():
 def serialIO(command):
     ser.write(command.encode())  # Encode and send command
     message_received = ser.readline().decode()  # Read serial response
-    while (
-        not "~" in message_received
-    ):  # Read serial response until end of message character received
+    while (not "~" in message_received):  # Read serial response until end of message character received
         print(message_received)
         message_received = ser.readline().decode()
 
