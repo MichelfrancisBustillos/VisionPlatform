@@ -15,8 +15,6 @@ capture = cv2.VideoCapture(0, cv2.CAP_DSHOW)  # Create video capture object with
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
-cv2.namedWindow("Frame")
-
 # Continuous loop to display multiple frames
 while True:
     # Get frames
