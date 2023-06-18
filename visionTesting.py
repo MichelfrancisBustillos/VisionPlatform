@@ -1,5 +1,4 @@
 import cv2
-import flask
 
 # Initialize Model
 net = cv2.dnn.readNet("dnn_model/yolov4-tiny.weights", "dnn_model/yolov4-tiny.cfg")  # Load model
@@ -12,7 +11,7 @@ with open("dnn_model/classes.txt", "r") as file_object:
         classes.append(class_name)
 
 # Initialize Camera
-capture = cv2.VideoCapture("rtsps://192.168.1.1:7441/xKJeUq1Sltdm5HTH?enableSrtp")  # Create video capture object with first webcam (index 0)
+capture = cv2.VideoCapture(0, cv2.CAP_DSHOW)  # Create video capture object with first webcam (index 0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
